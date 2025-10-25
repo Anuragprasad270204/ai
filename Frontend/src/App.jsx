@@ -17,7 +17,7 @@ const[review,setreview] = useState("");
     prism.highlightAll();
   })
   async function reviewCode() {
-   const response= await axios.post("https://ai-1-7jk6.onrender.com/ai/get-review", {code});
+   const response= await axios.post("https://ai-ywpq.onrender.com/ai/get-review", {code});
     setreview(response.data);
   } ;
   return (
