@@ -4,12 +4,7 @@ const cors = require('cors')
 
 const app = express()
 
-const express = require('express');
-const cors = require('cors');
-const express = require('express'); // <-- Removed second declaration
-const aiRoutes = require('./routes/ai.routes'); 
 
-const app = express();
 
 // --- 1. CORS Configuration (CRITICAL FIX) ---
 // We define the specific origin to allow communication from your Vercel app.
@@ -41,16 +36,6 @@ app.get('/', (req, res) => {
 app.use('/ai', aiRoutes);
 
 
-// Export the configured application instance
-module.exports = app;
 
-
-app.use(express.json())
-
-app.get('/', (req, res) => {
-    res.send('Hello World')
-})
-
-app.use('/ai', aiRoutes)
 
 module.exports = app
